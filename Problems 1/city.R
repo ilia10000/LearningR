@@ -13,9 +13,16 @@ closures = c(closures, A+B+C+D+E) #appending sum of closed cities in sample to c
 }
 return (closures)
 }
-
-data = Quint(1000)
+n=1000
+data = Quint(n)
 data[data<3] <- 0
 data[data>=3] <- 1
 smean = mean(data)
 svar = var(data)
+std = sqrt(svar)
+error = qnorm(0.975)*std/sqrt(n)
+left = smean - error
+right = smean + error
+ci = c(left,right)
+ci
+ 
