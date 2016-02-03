@@ -23,3 +23,19 @@ RG = function(N)
 	}
 	return (c(1:100))
 }
+N = 0
+hist(	RG(N),
+	main="Histogram of Random-Generator Output")
+N = 1
+hist(	RG(N),
+	main="Histogram of Random-Generator Output")
+N = 2
+hist(	RG(N),
+	main="Histogram of Random-Generator Output")
+N = 3
+hist(	RG(N),
+	main="Histogram of Random-Generator Output")
+N = 4
+hist(	RG(N),
+	main="Histogram of Random-Generator Output")
+	
