@@ -15,11 +15,12 @@ return (closures)
 }
 n=1000
 data = Quint(n)
+#Make data binary
 data[data<3] <- 0
 data[data>=3] <- 1
-smean = mean(data)
-svar = var(data)
-std = sqrt(svar)
+smean = mean(data) 	#sample mean
+svar = var(data) 		#sample var
+std = sqrt(svar)		#sample std deviation
 error = qnorm(0.975, df=n-1)*std/sqrt(n) #Use T(n-1)
 left = smean - error
 right = smean + error
