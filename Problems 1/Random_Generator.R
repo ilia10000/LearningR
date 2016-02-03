@@ -25,17 +25,22 @@ RG = function(N)
 }
 N = 0
 hist(	RG(N),
-	main="Histogram of Random-Generator Output")
+	main="Histogram of Random-Generator Output",
+	xlab="RG(0)")
 N = 1
 hist(	RG(N),
-	main="Histogram of Random-Generator Output")
+	main="Histogram of Random-Generator Output",
+	xlab="RG(1)")
 N = 2
 hist(	RG(N),
-	main="Histogram of Random-Generator Output")
+	main="Histogram of Random-Generator Output",
+	xlab="RG(2)")
 N = 3
 hist(	RG(N),
-	main="Histogram of Random-Generator Output")
+	main="Histogram of Random-Generator Output",
+	xlab="RG(3)")
 N = 4
 hist(	RG(N),
-	main="Histogram of Random-Generator Output")
+	main="Histogram of Random-Generator Output",
+	xlab="RG(4)")
 	
