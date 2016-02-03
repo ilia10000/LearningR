@@ -10,4 +10,5 @@ Posmin3by10of5 = (Posmin10^3)*((1-Posmin10)^2)*choose(5,3)#P that 5 sets of 10 t
 Posmin4by10of5 = (Posmin10^4)*((1-Posmin10))*choose(5,4)#P that 5 sets of 10 trials have 4 with positive min
 Posmin5by10of5 = (Posmin10^5)#P that 5 sets of 10 trials have 5 with positive min
 Posmin3ormore = Posmin3by10of5 + Posmin4by10of5 + Posmin5by10of5 
-
+results = c(Neg,Negmax10,Posmin10,Posmin3ormore)
+results
