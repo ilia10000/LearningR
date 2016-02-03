@@ -13,5 +13,9 @@ closures = c(closures, A+B+C+D+E) #appending sum of closed cities in sample to c
 }
 return (closures)
 }
-set.seed(1)
-Quint(10)
+
+data = Quint(1000)
+data[data<3] <- 0
+data[data>=3] <- 1
+smean = mean(data)
+svar = var(data)
