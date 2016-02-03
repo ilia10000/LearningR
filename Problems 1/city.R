@@ -20,7 +20,7 @@ data[data>=3] <- 1
 smean = mean(data)
 svar = var(data)
 std = sqrt(svar)
-error = qnorm(0.975)*std/sqrt(n)
+error = qnorm(0.975, df=n-1)*std/sqrt(n) #Use T(n-1)
 left = smean - error
 right = smean + error
 ci = c(left,right)
