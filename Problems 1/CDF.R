@@ -12,3 +12,4 @@ Posmin5by10of5 = (Posmin10^5)#P that 5 sets of 10 trials have 5 with positive mi
 Posmin3ormore = Posmin3by10of5 + Posmin4by10of5 + Posmin5by10of5 
 results = c(Neg,Negmax10,Posmin10,Posmin3ormore)
 results
+#Answers provided using above calculations
