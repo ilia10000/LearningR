@@ -16,6 +16,7 @@ return (closures)
 n=1000
 data = Quint(n)
 mean(data)
+sd(data)
 #Make data binary
 data[data<3] <- 0
 data[data>=3] <- 1
@@ -28,7 +29,7 @@ right = smean + error
 ci = c(left,right)
 ci
 
-#Let's say parameters changed increased
+#Let's say roads increased
 Quint = function(n){
 closures=NULL
 #sampling n times
@@ -46,3 +47,4 @@ return (closures)
 n=1000
 data = Quint(n)
 mean(data)
+sd(data)
