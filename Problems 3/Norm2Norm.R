@@ -5,11 +5,11 @@ R = sqrt(-2*log(V))
 return(c(R*cos(theta), R*sin(theta)))
 }
 
-# Chi-Squared(2) from N(0,1)
+# Generate N(4,9) from N(0,1)
 U1 = runif(1,0,1)
 V1 = runif(1,0,1)
+mu = 4
+sigma = 3
 Norm = RNORM(U1,V1) #2 independent r.v.s from N(0,1)
-Chis_df1 = Norm^2 #2 independent Chi Squares df 1
-Chi_df2 = sum(Chis_df1) #1 Chi Square df 2
-Chi_df2
-
+New_norm = sigma*Norm + mu
+New_norm
