@@ -37,8 +37,8 @@ upper = c(1:1000)/1000
 lower = upper - 1/1000
 m=mean(data)
 s=sd(data)
-U = abs(upper-pnorm(data,m,s))
-L = abs(lower-pnorm(data,m,s))
+U = abs(upper-pnorm(data,0,1))
+L = abs(lower-pnorm(data,0,1))
 KSd = max(U,L)
 KS(KSd, 1000, 1000)
 
