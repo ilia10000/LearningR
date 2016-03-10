@@ -41,10 +41,28 @@ New_Y=c(5.3967195761284,
 New_Bhat1 = B_hat_1_coeffs%*%New_Y
 New_Bhat1
 Mult = qt(0.975, 18)
-New_V_Bhat=var(New_Y)*XTX_inv
+New_V_Bhat=var(e)*XTX_inv
 new_var = New_V_Bhat[2,2]
 SE = sqrt(new_var)
 conf_int_B1 = c(New_Bhat1 - Mult*SE,New_Bhat1 + Mult*SE)
 conf_int_B1
 new_cov_B1_B2 = New_V_Bhat[2,3]
 new_cov_B1_B2
+
+#set.seed(20567856)
+counter=0
+for (i in 1:100000){
+new_e=rnorm(20,0,1)
+New_Y=X%*%B + new_e
+New_Bhat1 = B_hat_1_coeffs%*%New_Y
+New_Bhat1
+Mult = qt(0.975, 18)
+New_V_Bhat=var(new_e)*XTX_inv
+new_var = New_V_Bhat[2,2]
+SE = sqrt(new_var)
+conf_int_B1 <- c(New_Bhat1 - Mult*SE, New_Bhat1 + Mult*SE)
+if (conf_int_B1[1] < 2 && 2 < conf_int_B1[2]){counter = counter + 1}
+}
+proportion=counter/100000
+proportion
+
